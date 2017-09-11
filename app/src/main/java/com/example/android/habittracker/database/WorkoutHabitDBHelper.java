@@ -26,8 +26,6 @@ public class WorkoutHabitDBHelper extends SQLiteOpenHelper {
     public WorkoutHabitDBHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
-        Log.i("WorkoutHabitDBHelper", "in WorkoutHabitDBHelper");
-        Log.i("create table log con", SQL_CREATE_WORKOUT_HABIT_TABLE);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -44,8 +42,5 @@ public class WorkoutHabitDBHelper extends SQLiteOpenHelper {
         //db.execSQL("DROP TABLE IF EXIST " + WorkoutHabitDBContract.WorkoutHabitEntry.TABLE_NAME +";");
     }
 
-    private boolean isDBEXist(String DBname, Context context){
-        File dbFile = context.getDatabasePath(DBname);
-        return dbFile.exists();
-    }
+
 }
