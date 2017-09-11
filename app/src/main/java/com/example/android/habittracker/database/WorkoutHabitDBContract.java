@@ -11,7 +11,7 @@ public class WorkoutHabitDBContract {
     private WorkoutHabitDBContract(){}
 
     public static final class WorkoutHabitEntry implements BaseColumns{
-        public static final String TABLE_NAME = "workout_habit";
+        public static final String TABLE_NAME = "workouthabit";
         public static final String _ID = BaseColumns._ID;
         public static final String TITLE_COLUMN = "title";
         public static final String DATE_WORKOUT_COLUMN = "date_workout";
