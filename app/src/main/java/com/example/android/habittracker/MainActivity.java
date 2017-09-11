@@ -24,16 +24,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        dbHelper = new WorkoutHabitDBHelper(this);
 
-        //dbHelper.getWritableDatabase();
-        displayDBInfo();
+
         insertData("push up", 3, 20);
         insertData("sit up", 3, 30);
         insertData("jumping jack",5, 15);
+
+        displayDBInfo();
     }
 
     private void displayDBInfo(){
-        dbHelper = new WorkoutHabitDBHelper(this);
+
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
